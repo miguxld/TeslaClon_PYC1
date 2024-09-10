@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    $bgcolor: whitesmoke;
+    $color1: #272727;
+    $color2: #FFFF;
+    $btn1: #3E6AE1;
+    $btn3: #111111;
+    $btn3color: #A1A3A5;
+    $footerbg: #000;
+    $font: 'Poppins', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body{
+    background-color: black;
+    color: $color2;
+    position: relative;
+    header nav{
+        transition: .3s background;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1.5em;
+        img{max-width: 125px;}
+        .tags a{
+            color: $color2;
+            margin-right: 1em;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .user, .user-burger{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            img{max-width: 23px;}
+        }
+        .responsive-menu,
+        #menu-toggle{display: none;}
+        label{
+            display: inline-block;
+            background-color: #2727272c;
+            padding: .5em;
+            border-radius: 5px;
+        }
+        .menu-burger{
+            overflow: auto;
+            transform: translateX(-5000px);
+            transition: .3s all;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.822);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            right: 0; left: 0;
+            height: 90vh;
+            font-size: 25px;
+            cursor: pointer;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                li{
+                    list-style: none;
+                    padding: 1em;
+                    a{color: $btn3; text-decoration: none;}
+                    &:hover{
+                        background-color: gray;
+                    }
+                }
+            }
+            .user-burger{
+                background-color: #747474;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    .s-hero1,
+    .s-hero2, 
+    .s-hero3, 
+    .s-hero4, 
+    .s-hero5, 
+    .s-hero6, 
+    .s-hero7, 
+    .s-hero8, 
+    .s-hero9{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .text{
+            padding: 2em 0;
+            img{max-width: 500px;}
+        }
+        h1{
+            font-size: 50px;
+            font-weight: 500;
+        }
+        h3{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        a{color: $color2; text-decoration: none; border-bottom: 1px solid currentColor;}
+        .btns{
+            display: flex;
+            gap: 1em;
+            button{
+                padding: .7em 1.7em;
+                width: 250px;
+                border: none;
+                border-radius: 5px;
+                font-weight: 600;
+                color: $color1;
+                cursor: pointer;
+            }
+            .orderbtn{
+                background-color: $btn1;
+                color: $color2;
+            }
+        }
+    }
+    .s-hero1{background-image: url('../imgs/Homepage-Model-3-Desktop-US.png');}
+    .s-hero2{background-image: url('../imgs/Homepage-Model-Y-Desktop-US-v2.png');}
+    .s-hero3{background-image: url('../imgs/Homepage-Model-X-Desktop-US.png');}
+    .s-hero4{background-image: url('../imgs/Homepage-Model-S-Desktop-US.png');}
+    .s-hero5{
+        background-image: url('../imgs/Homepage-Cybertruck-Desktop.jpg');
+        .btns .orderbtn, .btns .learn{
+            background-color: #11111193;
+            color: $btn3color;
+            border-top: 2px solid $btn3color;
+            border-radius: 0;
+            font-size: 18px;
+            text-transform: uppercase;
+            &:hover{
+                background-color: #111111;
+                transition: .3s all;
+            }
+        }
+    }
+    .s-hero6{background-image: url('../imgs/Homepage-SolarPanels-01-Desktop.avif');}
+    .s-hero7{background-image: url('../imgs/Homepage-SolarRoof-Desktop-US.png');}
+    .s-hero8{background-image: url('../imgs/Homepage-Powerwall-Desktop-US.png');}
+    .s-hero9{background-image: url('../imgs/Homepage-Accessories-Desktop-US.png');}
+}
+footer{
+    padding: 2em;
+    text-align: center;
+    p{
+        font-size: 11px;
+        width: 50%;
+        margin: 1em auto;
+        color: $btn3color;
+    }
+    .teslaFooter{
+        font-size: 11px;
+        a{color: $btn3color; text-decoration: none; margin-right: 10px; font-weight: bold;}
+        margin: 1em 0;
+    }
+    .devFooter{
+        margin: 1em 0;
+        color: $btn3color;
+        a{text-decoration: none;}
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    header{
+        position: sticky;
+        top: 0;
+    }
+    header nav{
+        background-color: rgba(80, 80, 80, 0.158);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        .tags{
+            display: none;
+        }
+        .user{
+            display: none !important;
+        }
+        .responsive-menu{display: block !important;}
+    }
+    .s-hero1,
+    .s-hero2, 
+    .s-hero3, 
+    .s-hero4, 
+    .s-hero5, 
+    .s-hero6, 
+    .s-hero7, 
+    .s-hero8, 
+    .s-hero9{
+        .text{
+            margin-top: 3em;
+            img{width: 300px;}
+            h1{
+                font-size: 45px;
+                font-weight: 500;
+            }
+            h2{
+                font-size: 16px;
+            }
+            h3{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        .btns{
+            .orderbtn, .demo, .learn{
+                width: 150px;
+            }
+        }
+    }
+}

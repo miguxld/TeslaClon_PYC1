@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+body header nav {
+  transition: 0.3s background;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.5em;
+}
+body header nav img {
+  max-width: 125px;
+}
+body header nav .tags a {
+  color: white;
+  margin-right: 1em;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+body header nav .user, body header nav .user-burger {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+body header nav .user img, body header nav .user-burger img {
+  max-width: 23px;
+}
+body header nav .responsive-menu,
+body header nav #menu-toggle {
+  display: none;
+}
+body header nav label {
+  display: inline-block;
+  background-color: rgba(39, 39, 39, 0.1725490196);
+  padding: 0.5em;
+  border-radius: 5px;
+}
+body header nav .menu-burger {
+  overflow: auto;
+  transform: translateX(-5000px);
+  transition: 0.3s all;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.822);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  right: 0;
+  left: 0;
+  height: 90vh;
+  font-size: 25px;
+  cursor: pointer;
+}
+body header nav .menu-burger ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body header nav .menu-burger ul li {
+  list-style: none;
+  padding: 1em;
+}
+body header nav .menu-burger ul li a {
+  color: #111111;
+  text-decoration: none;
+}
+body header nav .menu-burger ul li:hover {
+  background-color: gray;
+}
+body header nav .menu-burger .user-burger {
+  background-color: #747474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .s-hero1,
+body .s-hero2,
+body .s-hero3,
+body .s-hero4,
+body .s-hero5,
+body .s-hero6,
+body .s-hero7,
+body .s-hero8,
+body .s-hero9 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .s-hero1 .text,
+body .s-hero2 .text,
+body .s-hero3 .text,
+body .s-hero4 .text,
+body .s-hero5 .text,
+body .s-hero6 .text,
+body .s-hero7 .text,
+body .s-hero8 .text,
+body .s-hero9 .text {
+  padding: 2em 0;
+}
+body .s-hero1 .text img,
+body .s-hero2 .text img,
+body .s-hero3 .text img,
+body .s-hero4 .text img,
+body .s-hero5 .text img,
+body .s-hero6 .text img,
+body .s-hero7 .text img,
+body .s-hero8 .text img,
+body .s-hero9 .text img {
+  max-width: 500px;
+}
+body .s-hero1 h1,
+body .s-hero2 h1,
+body .s-hero3 h1,
+body .s-hero4 h1,
+body .s-hero5 h1,
+body .s-hero6 h1,
+body .s-hero7 h1,
+body .s-hero8 h1,
+body .s-hero9 h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+body .s-hero1 h3,
+body .s-hero2 h3,
+body .s-hero3 h3,
+body .s-hero4 h3,
+body .s-hero5 h3,
+body .s-hero6 h3,
+body .s-hero7 h3,
+body .s-hero8 h3,
+body .s-hero9 h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+body .s-hero1 a,
+body .s-hero2 a,
+body .s-hero3 a,
+body .s-hero4 a,
+body .s-hero5 a,
+body .s-hero6 a,
+body .s-hero7 a,
+body .s-hero8 a,
+body .s-hero9 a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+body .s-hero1 .btns,
+body .s-hero2 .btns,
+body .s-hero3 .btns,
+body .s-hero4 .btns,
+body .s-hero5 .btns,
+body .s-hero6 .btns,
+body .s-hero7 .btns,
+body .s-hero8 .btns,
+body .s-hero9 .btns {
+  display: flex;
+  gap: 1em;
+}
+body .s-hero1 .btns button,
+body .s-hero2 .btns button,
+body .s-hero3 .btns button,
+body .s-hero4 .btns button,
+body .s-hero5 .btns button,
+body .s-hero6 .btns button,
+body .s-hero7 .btns button,
+body .s-hero8 .btns button,
+body .s-hero9 .btns button {
+  padding: 0.7em 1.7em;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #272727;
+  cursor: pointer;
+}
+body .s-hero1 .btns .orderbtn,
+body .s-hero2 .btns .orderbtn,
+body .s-hero3 .btns .orderbtn,
+body .s-hero4 .btns .orderbtn,
+body .s-hero5 .btns .orderbtn,
+body .s-hero6 .btns .orderbtn,
+body .s-hero7 .btns .orderbtn,
+body .s-hero8 .btns .orderbtn,
+body .s-hero9 .btns .orderbtn {
+  background-color: #3E6AE1;
+  color: white;
+}
+body .s-hero1 {
+  background-image: url("../imgs/Homepage-Model-3-Desktop-US.png");
+}
+body .s-hero2 {
+  background-image: url("../imgs/Homepage-Model-Y-Desktop-US-v2.png");
+}
+body .s-hero3 {
+  background-image: url("../imgs/Homepage-Model-X-Desktop-US.png");
+}
+body .s-hero4 {
+  background-image: url("../imgs/Homepage-Model-S-Desktop-US.png");
+}
+body .s-hero5 {
+  background-image: url("../imgs/Homepage-Cybertruck-Desktop.jpg");
+}
+body .s-hero5 .btns .orderbtn, body .s-hero5 .btns .learn {
+  background-color: rgba(17, 17, 17, 0.5764705882);
+  color: #A1A3A5;
+  border-top: 2px solid #A1A3A5;
+  border-radius: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+body .s-hero5 .btns .orderbtn:hover, body .s-hero5 .btns .learn:hover {
+  background-color: #111111;
+  transition: 0.3s all;
+}
+body .s-hero6 {
+  background-image: url("../imgs/Homepage-SolarPanels-01-Desktop.avif");
+}
+body .s-hero7 {
+  background-image: url("../imgs/Homepage-SolarRoof-Desktop-US.png");
+}
+body .s-hero8 {
+  background-image: url("../imgs/Homepage-Powerwall-Desktop-US.png");
+}
+body .s-hero9 {
+  background-image: url("../imgs/Homepage-Accessories-Desktop-US.png");
+}
+
+footer {
+  padding: 2em;
+  text-align: center;
+}
+footer p {
+  font-size: 11px;
+  width: 50%;
+  margin: 1em auto;
+  color: #A1A3A5;
+}
+footer .teslaFooter {
+  font-size: 11px;
+  margin: 1em 0;
+}
+footer .teslaFooter a {
+  color: #A1A3A5;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
+}
+footer .devFooter {
+  margin: 1em 0;
+  color: #A1A3A5;
+}
+footer .devFooter a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1050px) {
+  header {
+    position: sticky;
+    top: 0;
+  }
+  header nav {
+    background-color: rgba(80, 80, 80, 0.158);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+  header nav .tags {
+    display: none;
+  }
+  header nav .user {
+    display: none !important;
+  }
+  header nav .responsive-menu {
+    display: block !important;
+  }
+  .s-hero1 .text,
+  .s-hero2 .text,
+  .s-hero3 .text,
+  .s-hero4 .text,
+  .s-hero5 .text,
+  .s-hero6 .text,
+  .s-hero7 .text,
+  .s-hero8 .text,
+  .s-hero9 .text {
+    margin-top: 3em;
+  }
+  .s-hero1 .text img,
+  .s-hero2 .text img,
+  .s-hero3 .text img,
+  .s-hero4 .text img,
+  .s-hero5 .text img,
+  .s-hero6 .text img,
+  .s-hero7 .text img,
+  .s-hero8 .text img,
+  .s-hero9 .text img {
+    width: 300px;
+  }
+  .s-hero1 .text h1,
+  .s-hero2 .text h1,
+  .s-hero3 .text h1,
+  .s-hero4 .text h1,
+  .s-hero5 .text h1,
+  .s-hero6 .text h1,
+  .s-hero7 .text h1,
+  .s-hero8 .text h1,
+  .s-hero9 .text h1 {
+    font-size: 45px;
+    font-weight: 500;
+  }
+  .s-hero1 .text h2,
+  .s-hero2 .text h2,
+  .s-hero3 .text h2,
+  .s-hero4 .text h2,
+  .s-hero5 .text h2,
+  .s-hero6 .text h2,
+  .s-hero7 .text h2,
+  .s-hero8 .text h2,
+  .s-hero9 .text h2 {
+    font-size: 16px;
+  }
+  .s-hero1 .text h3,
+  .s-hero2 .text h3,
+  .s-hero3 .text h3,
+  .s-hero4 .text h3,
+  .s-hero5 .text h3,
+  .s-hero6 .text h3,
+  .s-hero7 .text h3,
+  .s-hero8 .text h3,
+  .s-hero9 .text h3 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .s-hero1 .btns .orderbtn, .s-hero1 .btns .demo, .s-hero1 .btns .learn,
+  .s-hero2 .btns .orderbtn,
+  .s-hero2 .btns .demo,
+  .s-hero2 .btns .learn,
+  .s-hero3 .btns .orderbtn,
+  .s-hero3 .btns .demo,
+  .s-hero3 .btns .learn,
+  .s-hero4 .btns .orderbtn,
+  .s-hero4 .btns .demo,
+  .s-hero4 .btns .learn,
+  .s-hero5 .btns .orderbtn,
+  .s-hero5 .btns .demo,
+  .s-hero5 .btns .learn,
+  .s-hero6 .btns .orderbtn,
+  .s-hero6 .btns .demo,
+  .s-hero6 .btns .learn,
+  .s-hero7 .btns .orderbtn,
+  .s-hero7 .btns .demo,
+  .s-hero7 .btns .learn,
+  .s-hero8 .btns .orderbtn,
+  .s-hero8 .btns .demo,
+  .s-hero8 .btns .learn,
+  .s-hero9 .btns .orderbtn,
+  .s-hero9 .btns .demo,
+  .s-hero9 .btns .learn {
+    width: 150px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
